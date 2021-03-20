@@ -21,11 +21,17 @@ public class AuthorizationController {
         this.userService = userService;
     }
 
-    @GetMapping("/signup")
+//    @GetMapping("/signup")
+//    public String registration(Model model) {
+//        User user = new User();
+//        model.addAttribute("user",user);
+//        return "registration";
+//    }
+    @GetMapping("/")
     public String registration(Model model) {
         User user = new User();
         model.addAttribute("user",user);
-        return "registration";
+        return "/login";
     }
 
     @PostMapping("/signup")
